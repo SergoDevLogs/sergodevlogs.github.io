@@ -15,29 +15,34 @@ listItems.forEach((item) => {
 let myButton = document.querySelector("button");
 let myHeading = document.querySelector("h1");
 
-function setUserName() {
-    const myName = prompt("Please enter your name");
-    if(!myName) {
-        setUserName();
+function setUserName(cause) {
+    const myName = prompt(cause);
+    if(myName == null) {
+        return;
+    }
+    if(myName == "") {
+        setUserName("Ты ничего не ввел, родной!");
+        return;
     }
     if (myName.length >= 15){
-        setUserName();
+        setUserName("Это уже перебор!");
+        return;
     }
     else {
         localStorage.setItem("name", myName);
-        myHeading.textContent = `Mozilla is cool, ${myName}`;
+        myHeading.textContent = `Поздравляю, ${myName}, ты - подебил.`;
     }
 }
 
 myButton.addEventListener("click", () => {
-    setUserName();
+    setUserName("Введите имя пользователя");
 });
 
 if(!localStorage.getItem("name")) {
     setUserName();
 } else {
     const storedName = localStorage.getItem("name");
-    myHeading.textContent = `Mozilla is cool, ${storedName}`;
+    myHeading.textContent = `Поздравляю, ${storedName}, ты - подебил.`;
 }
 
 const myImage = document.querySelector("img");
