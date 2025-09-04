@@ -19,7 +19,11 @@ function setUserName() {
     const myName = prompt("Please enter your name");
     if(!myName) {
         setUserName();
-    } else {
+    }
+    if (myName.length >= 15){
+        setUserName();
+    }
+    else {
         localStorage.setItem("name", myName);
         myHeading.textContent = `Mozilla is cool, ${myName}`;
     }

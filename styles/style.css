@@ -1,6 +1,7 @@
 html {
   font-size: 10px;
   font-family: 'Open Sans', sans-serif;
+  color: white;
 }
 
 
@@ -15,24 +16,30 @@ p, li {
   letter-spacing: 1px;
 }
 
+a {
+  color: gray;
+}
 
 html {
-  background-color: #00539F;
+  background-color: #292928;
 }
 
 body {
-  width: 600px;
+  width: 75%;
   margin: 0 auto;
-  background-color: #FF9500;
+  background-color: #303030;
   padding: 0 20px 20px 20px;
-  border: 5px solid black;
 }
 
 h1 {
   margin: 0;
   padding: 20px 0;
-  color: #00539F;
+  color: orange;
   text-shadow: 3px 3px 1px black;
+}
+
+li {
+  color:darkcyan;
 }
 
 img {
@@ -41,6 +48,50 @@ img {
 }
 
 .done {
-  color: darkcyan;
-  text-decoration: line-through dotted black 2px;
+  color: white;
 }
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 60px;
+  background: #fff;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 30px;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 40px;
+}
+
+button{
+  border-radius: 30px;
+  color:white;
+  background-color: #292928;
+  border-style: solid;
+  border-color: transparent;
+  width:40%;
+  height: 40px;
+}
+
+button:hover{
+  background-color: gray;
+}
+
+button:active{
+  background-color: rgb(103, 103, 103);
+}
+
